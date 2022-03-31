@@ -1,0 +1,40 @@
+{
+  "packages": [
+    {
+      "local": "São Paulo",
+      "image": "@drawable/sao_paulo_sp",
+      "days": "2 days",
+      "price": "$ 243.99"
+    },
+    {
+      "local": "Belo Horizonte",
+      "image": "@drawable/belo_horizonte_mg",
+      "days": "3 days",
+      "price": "$ 421.50"
+    },
+    {
+      "local": "Recife",
+      "image": "@drawable/recife_pe",
+      "days": "4 days",
+      "price": "$ 754.20"
+    },
+    {
+      "local": "Rio de Janeiro",
+      "image": "@drawable/rio_de_janeiro_rj",
+      "days": "6 days",
+      "price": "$ 532.55"
+    },
+    {
+      "local": "Salvador",
+      "image": "@drawable/salvador_ba",
+      "days": "5 days",
+      "price": "$ 899.99"
+    },
+    {
+      "local": "Foz do Iguaçu",
+      "image": "@drawable/foz_do_iguacu_pr",
+      "days": "1 day",
+      "price": "$ 289.90"
+    }
+  ]
+}
