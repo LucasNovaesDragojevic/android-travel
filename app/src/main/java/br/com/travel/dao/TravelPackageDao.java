@@ -18,7 +18,7 @@ public class TravelPackageDao {
         travelPackageList.add(new TravelPackage("Recife", "recife_pe", 2, new BigDecimal("310")));
         travelPackageList.add(new TravelPackage("Rio de Janerio", "rio_de_janeiro_rj", 2, new BigDecimal("150")));
         travelPackageList.add(new TravelPackage("Salvador", "salvador_ba", 2, new BigDecimal("550")));
-        travelPackageList.add(new TravelPackage("Foz do Iguaçu", "foz_do_iguacu_pr", 2, new BigDecimal("399.99")));
+        travelPackageList.add(new TravelPackage("Foz do Iguaçu", "foz_do_iguacu_pr", 1, new BigDecimal("399.99")));
     }
 
     public List<TravelPackage> getAll() {

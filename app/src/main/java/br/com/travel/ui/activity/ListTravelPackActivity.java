@@ -14,14 +14,14 @@ import br.com.travel.ui.adapter.ListTravelPackAdapter;
 
 public class ListTravelPackActivity extends AppCompatActivity {
 
-    private TravelPackageDao travelPackageDao= new TravelPackageDao();
+    private final TravelPackageDao travelPackageDao = new TravelPackageDao();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_travel_pack);
         List<TravelPackage> travelPackageList = travelPackageDao.getAll();
-        ListView travelPackListView = findViewById(R.id.activity_list_travel_pack_list);
+        ListView travelPackListView = findViewById(R.id.travel_package_list);
         travelPackListView.setAdapter(new ListTravelPackAdapter(travelPackageList, this));
     }
 }
