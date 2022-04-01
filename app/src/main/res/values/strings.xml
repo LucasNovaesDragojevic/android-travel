@@ -4,6 +4,9 @@
     <string name="promotions">Promotions</string>
     <string name="brazil">Brazil</string>
     <string name="photo_of_local_of_travel_package">Photo of local of travel package</string>
+    <string name="buy">Buy</string>
+    <string name="final_price">Final price:</string>
+    <string name="travel_package_image">Travel package image</string>
     <plurals name="plural_day">
         <item quantity="one">%1$d day</item>
         <item quantity="other">%1$d days</item>

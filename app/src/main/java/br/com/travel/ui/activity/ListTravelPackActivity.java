@@ -2,6 +2,7 @@ package br.com.travel.ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ListView;
 
@@ -23,5 +24,7 @@ public class ListTravelPackActivity extends AppCompatActivity {
         List<TravelPackage> travelPackageList = travelPackageDao.getAll();
         ListView travelPackListView = findViewById(R.id.travel_package_list);
         travelPackListView.setAdapter(new ListTravelPackAdapter(travelPackageList, this));
+        Intent intent = new Intent(this, TravelPackageDetailsActivity.class);
+        startActivity(intent);
     }
 }
