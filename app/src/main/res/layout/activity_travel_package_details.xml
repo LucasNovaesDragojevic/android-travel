@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/sao_paulo_sp" />
+        tools:srcCompat="@drawable/sao_paulo_sp" />
 
     <TextView
         android:id="@+id/activity_travel_package_details_local"
@@ -43,9 +43,10 @@
 
     <TextView
         android:id="@+id/activity_travel_package_details_duration"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/activity_travel_package_details_price"
         app:layout_constraintStart_toStartOf="@+id/activity_travel_package_details_days"
         app:layout_constraintTop_toBottomOf="@+id/activity_travel_package_details_days"
         tools:text="08/12 -10/12 at 2022" />
@@ -60,21 +61,22 @@
 
     <TextView
         android:id="@+id/activity_travel_package_details_price"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
+        android:textAlignment="textEnd"
         android:textColor="@android:color/holo_green_dark"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/activity_travel_package_details_duration"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/activity_travel_package_details_duration"
         tools:text="$ 100.00" />
 
     <Button
         android:id="@+id/activity_travel_package_details_btn_buy"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_margin="8dp"
         android:text="@string/buy"
         app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
