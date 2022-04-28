@@ -7,6 +7,14 @@
     <string name="buy">Buy</string>
     <string name="final_price">Final price:</string>
     <string name="travel_package_image">Travel package image</string>
+    <string name="insert_the_informations_of_credit_card_for_payment">Insert the informations of credit card for payment</string>
+    <string name="card_number_hint">Card number</string>
+    <string name="card_month_hint">MM</string>
+    <string name="card_year_hint">YY</string>
+    <string name="card_cvv_hint">CVV</string>
+    <string name="card_holder_hint">Name on card</string>
+    <string name="purchase">Purchase</string>
+    <string name="mask_to_name_on_card">ABCDEFGHIJKLMNOPQRSTUVWXYZ\u0020</string>
     <plurals name="plural_day">
         <item quantity="one">%1$d day</item>
         <item quantity="other">%1$d days</item>

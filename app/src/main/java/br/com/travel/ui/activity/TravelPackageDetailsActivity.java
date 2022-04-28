@@ -1,5 +1,6 @@
 package br.com.travel.ui.activity;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -32,6 +33,8 @@ public class TravelPackageDetailsActivity extends AppCompatActivity {
         this.showDays(travelPackage);
         this.showPrice(travelPackage);
         this.showDate(travelPackage);
+        Intent intent = new Intent(this, PaymentActivity.class);
+        startActivity(intent);
     }
 
     private void showDate(final TravelPackage travelPackage) {
