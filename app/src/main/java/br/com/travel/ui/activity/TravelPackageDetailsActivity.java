@@ -1,17 +1,15 @@
 package br.com.travel.ui.activity;
 
+import static br.com.travel.constants.AppConstants.TRAVEL_PACKAGE;
+
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.math.BigDecimal;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 
 import br.com.travel.R;
 import br.com.travel.function.GetDaysInText;
@@ -26,14 +24,31 @@ public class TravelPackageDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         super.setContentView(R.layout.activity_travel_package_details);
-        final TravelPackage travelPackage = new TravelPackage("São Paulo", "sao_paulo_sp", 2, new BigDecimal("199.99"));
-        this.showLocal(travelPackage);
-        this.showImage(travelPackage);
-        this.showDays(travelPackage);
-        this.showPrice(travelPackage);
-        this.showDate(travelPackage);
-        Intent intent = new Intent(this, PaymentActivity.class);
-        startActivity(intent);
+        final TravelPackage travelPackage = this.getTravelPackage();
+        if (travelPackage != null) {
+            this.showLocal(travelPackage);
+            this.showImage(travelPackage);
+            this.showDays(travelPackage);
+            this.showPrice(travelPackage);
+            this.showDate(travelPackage);
+            this.configBuyButton(travelPackage);
+        }
+    }
+
+    private void configBuyButton(TravelPackage travelPackage) {
+        final Button buyButton = super.findViewById(R.id.activity_travel_package_details_btn_buy);
+        buyButton.setOnClickListener(view -> {
+            final Intent intent = new Intent(this, PaymentActivity.class);
+            intent.putExtra(TRAVEL_PACKAGE, travelPackage);
+            super.startActivity(intent);
+        });
+    }
+
+    private TravelPackage getTravelPackage() {
+        final Intent intent = super.getIntent();
+        if (intent.hasExtra(TRAVEL_PACKAGE))
+            return (TravelPackage) intent.getSerializableExtra(TRAVEL_PACKAGE);
+        return null;
     }
 
     private void showDate(final TravelPackage travelPackage) {

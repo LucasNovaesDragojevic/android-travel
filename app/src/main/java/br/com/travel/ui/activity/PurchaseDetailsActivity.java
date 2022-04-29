@@ -1,5 +1,8 @@
 package br.com.travel.ui.activity;
 
+import static br.com.travel.constants.AppConstants.TRAVEL_PACKAGE;
+
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -21,12 +24,20 @@ public class PurchaseDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         super.setContentView(R.layout.activity_purchase_details);
-        super.setTitle("Purchase Details");
-        final TravelPackage travelPackage = new TravelPackage("São Paulo", "sao_paulo_sp", 2, new BigDecimal("199.99"));
-        this.showImage(travelPackage);
-        this.showLocal(travelPackage);
-        this.showDuration(travelPackage);
-        this.showPrice(travelPackage);
+        final TravelPackage travelPackage = this.getTravelPackage();
+        if (travelPackage != null) {
+            this.showImage(travelPackage);
+            this.showLocal(travelPackage);
+            this.showDuration(travelPackage);
+            this.showPrice(travelPackage);
+        }
+    }
+
+    private TravelPackage getTravelPackage() {
+        final Intent intent = super.getIntent();
+        if (intent.hasExtra(TRAVEL_PACKAGE))
+            return (TravelPackage) intent.getSerializableExtra(TRAVEL_PACKAGE);
+        return null;
     }
 
     private void showPrice(TravelPackage travelPackage) {
