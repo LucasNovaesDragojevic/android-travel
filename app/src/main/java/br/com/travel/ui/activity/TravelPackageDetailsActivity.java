@@ -26,7 +26,6 @@ public class TravelPackageDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         super.setContentView(R.layout.activity_travel_package_details);
-        super.setTitle("Details");
         final TravelPackage travelPackage = new TravelPackage("São Paulo", "sao_paulo_sp", 2, new BigDecimal("199.99"));
         this.showLocal(travelPackage);
         this.showImage(travelPackage);

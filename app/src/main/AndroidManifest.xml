@@ -10,11 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Travel">
         <activity
+            android:name=".ui.activity.PurchaseDetailsActivity"
+            android:exported="false"
+            android:label="@string/purchase_details" />
+        <activity
             android:name=".ui.activity.PaymentActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="@string/payment" />
         <activity
             android:name=".ui.activity.TravelPackageDetailsActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="@string/details" />
         <activity
             android:name=".ui.activity.ListTravelPackActivity"
             android:exported="true">

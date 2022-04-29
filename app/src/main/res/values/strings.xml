@@ -15,6 +15,13 @@
     <string name="card_holder_hint">Name on card</string>
     <string name="purchase">Purchase</string>
     <string name="mask_to_name_on_card">ABCDEFGHIJKLMNOPQRSTUVWXYZ\u0020</string>
+    <string name="banner_image">Banner image</string>
+    <string name="congratulations">Congratulations!</string>
+    <string name="purchase_made_successfully">Purchase made successfully</string>
+    <string name="check_out_the_purchase_summary">Check out the purchase summary:</string>
+    <string name="purchase_details">Purchase Details</string>
+    <string name="payment">Payment</string>
+    <string name="details">Details</string>
     <plurals name="plural_day">
         <item quantity="one">%1$d day</item>
         <item quantity="other">%1$d days</item>

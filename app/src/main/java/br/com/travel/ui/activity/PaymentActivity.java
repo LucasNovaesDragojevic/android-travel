@@ -2,6 +2,7 @@ package br.com.travel.ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -17,9 +18,10 @@ public class PaymentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         super.setContentView(R.layout.activity_payment);
-        super.setTitle("Payment");
         final TravelPackage travelPackage = new TravelPackage("São Paulo", "sao_paulo_sp", 2, new BigDecimal("199.99"));
         this.showFinalPrice(travelPackage);
+        Intent intent = new Intent(this, PurchaseDetailsActivity.class);
+        super.startActivity(intent);
     }
 
     private void showFinalPrice(final TravelPackage travelPackage) {
